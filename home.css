@@ -1,0 +1,65 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: minmax(300px, 60vh) repeat(1, 300px) minmax(150px, 30vh);
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: 300px 1fr 1fr 150px; /* valores fixos no mobile */
+  }
+}
+
+
+header {
+  grid-area: header;
+  outline: 2px solid black;
+  position: relative;
+  
+}
+.banner{
+    display: flex;
+    place-content:start space-between;
+    place-items: start end;
+    height: 50vh;
+    background: url('/img.png') center/cover no-repeat;
+    color: white;
+    
+}
+
+
+   
+.logo{
+    display: flex;
+}
+.contato{
+    display: flex;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #25D366;
+  font-weight: bold;
+}
+
+.whatsapp img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(536%) hue-rotate(96deg) brightness(96%) contrast(92%);
+}
+main{
+    background-color: blue;
+    
+    
+}
+footer{
+    background-color: black;
+   
+}
+
