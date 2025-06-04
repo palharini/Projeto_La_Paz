@@ -22,7 +22,7 @@ header {
     place-content:start space-between;
     place-items: start end;
     height: 70vh;
-    background: url('/img.png') center/cover no-repeat;
+    background: url('../Projeto_La_Paz/img.png') center/cover no-repeat;
     color: white;
     
 }
