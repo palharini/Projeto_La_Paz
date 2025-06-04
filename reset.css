@@ -3,14 +3,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
     
 }
 html, body{
     height: 100%;
+    gap: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    
     
     
 }
-div{
-    margin: 0 2rem;
+.banner>div{
+    margin: 1rem 2rem;
+}
+
+:root {
+    --primary: #ff6b00;
+    --secondary: #333333;
+    --accent: #ff9500;
+    --light: #f8f8f8;
+    --dark: #1a1a1a;
+    --gray: #e0e0e0;
+    --dark-gray: #777;
+}
+p, a, h1, h2 {
+   font-family: 'Roboto', sans-serif; 
 }
 

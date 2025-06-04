@@ -3,28 +3,25 @@ body {
   grid-template-areas:
     "header"
     "main"
+    "article"
     "footer";
-  grid-template-rows: minmax(300px, 60vh) repeat(1, 300px) minmax(150px, 30vh);
+  
   height: 100vh;
+  
 }
-@media (max-width: 768px) {
-  .container {
-    grid-template-rows: 300px 1fr 1fr 150px; /* valores fixos no mobile */
-  }
-}
-
-
 header {
   grid-area: header;
-  outline: 2px solid black;
+  outline: 1px solid black;
   position: relative;
+  height: 80vh;
+  
   
 }
 .banner{
     display: flex;
     place-content:start space-between;
     place-items: start end;
-    height: 50vh;
+    height: 70vh;
     background: url('/img.png') center/cover no-repeat;
     color: white;
     
@@ -34,9 +31,14 @@ header {
    
 .logo{
     display: flex;
+    
+    
 }
 .contato{
     display: flex;
+    
+  
+    
 }
 
 .whatsapp {
@@ -51,15 +53,89 @@ header {
 .whatsapp img {
   width: 20px;
   height: 20px;
+  
+  
   filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(536%) hue-rotate(96deg) brightness(96%) contrast(92%);
 }
-main{
-    background-color: blue;
-    
-    
+.contato>span{
+  padding-right: 0.5rem;
 }
-footer{
-    background-color: black;
+
+.container-navegacao {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  height: 10vh;
+  
+  
    
 }
 
+.container-navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.container-navegacao li {
+  margin: 0;
+}
+
+.container-navegacao a {
+  text-decoration: none;
+  color: lab(3.39% 0.3 0.1 / 0.601);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.5s ease, border-bottom 0.3s ease;
+  
+  
+}
+
+.container-navegacao a:hover {
+  color: #200303;
+  
+}
+
+
+
+main{
+  grid-area: main;
+   background-color: brown;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+  gap: 1rem; /* espaço entre colunas (opcional) */
+  padding: 2rem; /* espaçamento interno */
+  color: white;
+  background-color:blue;
+  background-color: #25D366;
+  
+}
+article{
+  grid-area: article;
+  background-color: brown;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+  gap: 1rem; /* espaço entre colunas (opcional) */
+  padding: 2rem; /* espaçamento interno */
+  color: white;
+  background-color:blue;
+  
+}
+footer {
+  grid-area: footer;
+  background-color: brown;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+  gap: 1rem; /* espaço entre colunas (opcional) */
+  padding: 2rem; /* espaçamento interno */
+  color: white;
+}
+
+
+
+ 
