@@ -1,97 +1,108 @@
-/* REMOVER altura fixa do header no mobile */
 @media (max-width: 768px) {
+
   header {
-    height: auto;
-    padding-bottom: 1rem;
+  
+  padding: 0.5rem 0.5rem;
+ 
+}
+  .menu-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(54, 53, 53, 0.95);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* <- Habilita rolagem vertical */
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+
+  .menu-fullscreen.active {
+    transform: translateX(0);
+  }
+
+  .menu-fullscreen ul {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     
   }
 
-  .container-navegacao {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
+  .menu-fullscreen li {
+    flex: 1; /* faz cada link ocupar espaço igual verticalmente */
     width: 100%;
-    transition: max-height 0.5s ease;
-  }
-
-  .container-navegacao.active {
-    max-height: 1000px; /* valor alto o suficiente */
-  }
-
-  .container-navegacao ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0;
-  }
-
-  .container-navegacao li {
-    width: 100%;
-    border-top: 1px solid #666;
-    text-align: center;
-  }
-
-  .container-navegacao a {
-    padding: 1rem;
-    display: block;
-    width: 100%;
-  }
-
-  .menu-toggle {
-    display: block;
-    z-index: 1;
-  }
-
-   .banner {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    /*padding: 1rem;*/
     
   }
 
-  /* Linha superior com logo e toggle à esquerda */
-  .banner-top {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    /*width: 100%;*/
-    gap: 1rem;
-    
-  }
-
-  .logo {
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    font-weight: bold;
-  }
-
-  .menu-toggle {
-    display: block;
-    z-index: 1;
-  }
-
-  /* Centraliza .contato abaixo */
-  .contato {
+  .menu-fullscreen a {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    text-align: center;
-    /*width: 100%;*/
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%; /* ocupa toda a altura da li */
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, color 0.3s;
   }
 
-  .contato .telefone,
-  .whatsapp {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  .menu-fullscreen a:hover {
+    background-color: white;
+    color: black;
+    
+    
   }
 
-  .whatsapp img {
-    width: clamp(16px, 4vw, 20px);
-    height: clamp(16px, 4vw, 20px);
+  .menu-fullscreen .icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
   }
+
+  .menu-fullscreen .label {
+    font-size: 1rem;
+  }
+
+  .logo>img{
+    
+  top: 1rem;
+  right: 1rem;
+  max-width: 50%;
+    
+    
+    
+}
+}
+.menu-toggle { /* configuração do toggle para mobile*/
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  
 
 }
 
 
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra no mobile */
+  }
+}

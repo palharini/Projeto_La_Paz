@@ -10,43 +10,56 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        
-      <div class="banner">
-        <div class="banner-top">
-          <div class="logo"><img src="logo.jpg" alt=""></div>
-          <div class="menu-toggle">☰</div>
-        </div>
-    
-        <div class="contato">
-          <div class="telefone">(11) 99999-9999</div>
-          <div class="whatsapp">
-            <img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp
-          </div>
-        </div>
+   <header>
+  <div class="banner">
+    <div class="banner-top">
+      <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+    <div class="contato">
+      <div class="telefone">(11) 99999-9999</div>
+      <div class="whatsapp">
+        <img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp
       </div>
-  
-      <nav class="container-navegacao">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#produtos-e-servicos">Produtos e Serviços</a></li>
-          <li><a href="#obituarios">Obituários</a></li>
-          <li><a href="#venda-programada">Venda Programada</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <script>
+    </div>
+  </div>
+
+  <!-- MENU EM TELA CHEIA -->
+  <nav class="menu-fullscreen">
+  <ul>
+    <li><a href="#home"><span class="icon">🏠</span><span class="label">Home</span></a></li>
+    <li><a href="#produtos-e-servicos"><span class="icon">🛠️</span><span class="label">Serviços</span></a></li>
+    <li><a href="#obituarios"><span class="icon">🕊️</span><span class="label">Obituários</span></a></li>
+    <li><a href="#venda-programada"><span class="icon">📅</span><span class="label">Venda</span></a></li>
+    <li><a href="#contato"><span class="icon">📞</span><span class="label">Contato</span></a></li>
+  </ul>
+</nav>
+
+
+</header>
+
+ <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.container-navegacao');
+    const nav = document.querySelector('.menu-fullscreen');
+    
 
     toggle.addEventListener('click', () => {
       nav.classList.toggle('active');
       toggle.textContent = nav.classList.contains('active') ? '✖' : '☰';
     });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        toggle.textContent = '☰';
+      });
+    });
   });
 </script>
+
+
+
 
 
     <main>

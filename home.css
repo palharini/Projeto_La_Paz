@@ -93,38 +93,65 @@ header > * {
   font-size: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: rgb(15, 15, 15);
   cursor: pointer;
   display: none;
   
 }
 
+.menu-fullscreen {
+    position: static;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    padding: 1rem 0;
+  }
 
-.container-navegacao {
-  width: 100%;
-  overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.6s ease;
-}
+  .menu-fullscreen ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* gap para deixar espaços entre os links*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 
-.container-navegacao ul {
-  list-style: none;
-  display: flex;
-  justify-content:center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-}
+  .menu-fullscreen li {
+    flex: none;
+  }
 
-.container-navegacao a {
-  color: rgb(10, 9, 9);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s, color 0.3s;
-}
+  .menu-fullscreen a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #111;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-bottom: none;
+  }
 
-.container-navegacao a:hover {
-  background-color: #555;
-  color: #ffd700;
-}
+  .menu-fullscreen a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    border-radius: 4px;
+  }
+
+  .menu-fullscreen .icon {
+    font-size: 1.2rem;
+  }
+
+  .menu-fullscreen .label {
+    font-size: 1rem;
+  }
 
 
 
