@@ -11,7 +11,7 @@ body {
 
 header {
   grid-area: header;
-  background-image: url('img.png');
+  background-image: url('banner.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -20,7 +20,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   color: white;
   position: relative;
 }
@@ -38,20 +38,35 @@ header > * {
 }
 .banner{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+
+  
+  
   width: 100%;
+  
 }
 .logo{
     display: flex;
     
     
+    
+}
+.logo>img{
+  border-radius: 50%;
 }
 .contato{
     display: flex;
+    gap: 1rem;
     
-  
-    
+       
 }
+.telefone{
+  display: flex;
+  align-items: center;
+  
+  
+}
+
 
 .whatsapp {
   display: flex;
@@ -70,7 +85,7 @@ header > * {
   
   filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(536%) hue-rotate(96deg) brightness(96%) contrast(92%);
 }
-.contato>span{
+.contato>.telefone{
   padding-right: 0.5rem;
 }
 
@@ -100,7 +115,7 @@ header > * {
 }
 
 .container-navegacao a {
-  color: rgb(230, 10, 10);
+  color: rgb(10, 9, 9);
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s, color 0.3s;

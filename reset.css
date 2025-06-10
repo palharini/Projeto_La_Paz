@@ -15,9 +15,9 @@ html, body{
     
     
 }
-.banner>div{
-    margin: 1rem 2rem;
-}
+/*.banner>div{
+    margin: 1rem 0rem;
+}*/
 
 :root {
     --primary: #ff6b00;
