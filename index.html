@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Media_Query.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -23,16 +24,30 @@
                 </a>    
             </div>
         </div>
-        <nav class="container-navegacao">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#produtos e serviços">Produtos e Serviços</a></li>
-                <li><a href="#obituários">Obituários</a></li>
-                <li><a href="#venda programada">Venda Programada</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <nav class="container-navegacao">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#produtos-e-servicos">Produtos e Serviços</a></li>
+          <li><a href="#obituarios">Obituários</a></li>
+          <li><a href="#venda-programada">Venda Programada</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </header>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.container-navegacao');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.textContent = nav.classList.contains('active') ? '✖' : '☰';
+    });
+  });
+</script>
+
+
     <main>
        <div>
     <h4>Coluna 1</h4>

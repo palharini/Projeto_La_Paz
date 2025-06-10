@@ -1,0 +1,66 @@
+/* MODO MOBILE */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    z-index: 2;
+  }
+
+  .container-navegacao {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    z-index: 1;
+  }
+
+  .container-navegacao.active {
+    max-height: 500px; /* ou use `none` com animação via JS */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .container-navegacao ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container-navegacao li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #666;
+  }
+
+  .container-navegacao a {
+    width: 100%;
+    padding: 1rem;
+    color: rgb(230, 10, 10);
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .container-navegacao a:hover {
+    background-color: #555;
+    color: #ffd700;
+  }
+}
