@@ -58,7 +58,7 @@ header > * {
 .logo>img{
   border-radius: 50%;
 }
-.contato{
+/*.contato{
     display: flex;
     gap: 1rem;
     
@@ -69,10 +69,10 @@ header > * {
   align-items: center;
   
   
-}
+}*/
 
 
-.whatsapp {
+/*.whatsapp {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -91,7 +91,7 @@ header > * {
 }
 .contato>.telefone{
   padding-right: 0.5rem;
-}
+}*/
 
 .menu-toggle {
   font-size: 2rem;
