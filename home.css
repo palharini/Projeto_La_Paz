@@ -42,9 +42,6 @@ header > * {
 .banner{
   display: flex;
   justify-content:space-between;
-
-  
-  
   width: 100%;
   
 }
@@ -52,11 +49,11 @@ header > * {
     display: flex;
     position: fixed;
     
-    
-    
 }
 .logo>img{
-  border-radius: 50%;
+  border-radius: 10%;
+  position: fixed;
+ 
 }
 /*.contato{
     display: flex;
