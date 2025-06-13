@@ -73,28 +73,29 @@ header {
 .menu-fullscreen .label {
   font-size: 1rem;
 }
-
 .logo > img {
-  top: 0.5rem;
-  left: 1rem;
-  max-width: 50%;
   position: fixed;
-  display: flex;
+  top: 1.5vh;
+  left: 1.5vw;
+  width: 10vw;         /* 10% da largura da tela */
+  height: auto;        /* mantém a proporção da imagem */
 }
 
 /* Transição no botão de toggle */
 .menu-toggle {
   display: none; /* A aparência do botão pode ser ajustada para dispositivos móveis */
-  font-size: 2rem;
+ 
   background: none;
   border: none;
   color: white;
   cursor: pointer;
   z-index: 1100;
   position: fixed;
-  top: 0.5rem;
-  right: 1rem;
+  top: 1.5vh;
+  right: 1.5vw;
   transition: transform 0.3s ease-in-out;
+  height: auto;
+  width: 10vw;
 }
 
 /* Quando o menu estiver ativo, o botão de toggle pode girar */
