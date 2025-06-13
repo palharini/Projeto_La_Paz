@@ -1,16 +1,15 @@
 @media (max-width: 768px) {
 
-  header {
+header {
   
   padding: 0.5rem 0.5rem;
+  height: 50vh; /* altura do banner */
  
 }
   body.menu-open {
   overflow: hidden; /* Desativa rolagem no body */
 }
-header{
-  height: 50vh; /* altura do banner */
-}
+
 /* Estilos do menu */
 .menu-fullscreen {
   overflow-y: auto;

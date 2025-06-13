@@ -14,7 +14,7 @@ body.menu-open {
 
 header {
   grid-area: header;
-  background-image: url('banner.jpg');
+  background-image: url('img/banner.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
