@@ -27,6 +27,7 @@
   <!-- MENU EM TELA CHEIA -->
   <nav class="menu-fullscreen">
   <ul>
+    
     <li><a href="#home"><span class="icon">🏠</span><span class="label">Home</span></a></li>
     <li><a href="#produtos-e-servicos"><span class="icon">🛠️</span><span class="label">Serviços</span></a></li>
     <li><a href="#obituarios"><span class="icon">🕊️</span><span class="label">Obituários</span></a></li>
@@ -37,26 +38,33 @@
 
 
 </header>
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu-fullscreen');
+  const body = document.body;
 
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.menu-fullscreen');
-    
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    body.classList.toggle('menu-open');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.textContent = nav.classList.contains('active') ? '✖' : '☰';
-    });
+    if (menu.classList.contains('active')) {
+      // Garante que o menu começa rolando do topo ("Home")
+      setTimeout(() => {
+        menu.scrollTop = 0;
+      }, 400); // espera a transição do CSS
+    }
+  });
 
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        toggle.textContent = '☰';
-      });
+  // Fecha o menu ao clicar em qualquer link
+  document.querySelectorAll('.menu-fullscreen a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      body.classList.remove('menu-open');
     });
   });
 </script>
+
+
 
 
 

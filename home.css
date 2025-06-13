@@ -8,6 +8,9 @@ body {
  
 }
 
+body.menu-open {
+  overflow: hidden; /* Desativa rolagem no body */
+}
 
 header {
   grid-area: header;
@@ -47,6 +50,7 @@ header > * {
 }
 .logo{
     display: flex;
+    position: fixed;
     
     
     

@@ -5,27 +5,29 @@
   padding: 0.5rem 0.5rem;
  
 }
-  .menu-fullscreen {
+  body.menu-open {
+  overflow: hidden; /* Desativa rolagem no body */
+}
+
+.menu-fullscreen {
+  overflow-y: auto;  /* Ativa rolagem no menu */
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   background: rgba(54, 53, 53, 0.95);
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto; /* <- Habilita rolagem vertical */
-  z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in-out;
+  z-index: 1000;
 }
 
+.menu-fullscreen.active {
+  transform: translateX(0);
+}
 
-  .menu-fullscreen.active {
-    transform: translateX(0);
-  }
 
   .menu-fullscreen ul {
     display: flex;
