@@ -73,27 +73,6 @@ header {
   font-size: 1rem;
 }
 
-
-/* Estilos do botão de fechar */
-.close-menu {
-  position: absolute;
-  top: 1.5rem; /* Coloca o botão mais próximo do topo */
-  left: 50%; /* Coloca o botão no centro */
-  transform: translateX(-50%); /* Ajusta a posição para centralizar corretamente */
-  font-size: 3rem;
-  background: transparent;
-  color: white;
-  border: none;
-  cursor: pointer;
-  z-index: 1100; /* Para garantir que o botão de fechar fique acima do conteúdo */
-}
-
-.close-menu:hover {
-  color: #ccc;
-}
-
-
-
 .logo > img {
   position: fixed;
   top: 1.5vh;
