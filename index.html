@@ -38,40 +38,6 @@
 
 
 </header>
-<script>
-const toggleBtn = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu-fullscreen');
-const body = document.body;
-
-// Adiciona o evento de clique no botão de toggle
-toggleBtn.addEventListener('click', () => {
-  // Alterna a classe 'active' no menu e no botão
-  menu.classList.toggle('active');
-  body.classList.toggle('menu-open');
-  toggleBtn.classList.toggle('active'); // Ativa a animação do botão de toggle
-
-  if (menu.classList.contains('active')) {
-    // Garante que o menu começa rolando do topo ("Home")
-    setTimeout(() => {
-      menu.scrollTop = 0;
-    }, 400); // espera a transição do CSS
-  }
-});
-
-// Fecha o menu ao clicar em qualquer link
-document.querySelectorAll('.menu-fullscreen a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-    body.classList.remove('menu-open');
-    toggleBtn.classList.remove('active'); // Restaura o estado do botão de toggle
-  });
-});
-
-</script>
-
-
-
-
 
 
 
@@ -122,6 +88,35 @@ document.querySelectorAll('.menu-fullscreen a').forEach(link => {
 </footer>
 
    
-    
+  <script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu-fullscreen');
+const body = document.body;
+
+// Adiciona o evento de clique no botão de toggle
+toggleBtn.addEventListener('click', () => {
+  // Alterna a classe 'active' no menu e no botão
+  menu.classList.toggle('active');
+  body.classList.toggle('menu-open');
+  toggleBtn.classList.toggle('active'); // Ativa a animação do botão de toggle
+
+  if (menu.classList.contains('active')) {
+    // Garante que o menu começa rolando do topo ("Home")
+    setTimeout(() => {
+      menu.scrollTop = 0;
+    }, 400); // espera a transição do CSS
+  }
+});
+
+// Fecha o menu ao clicar em qualquer link
+document.querySelectorAll('.menu-fullscreen a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+    body.classList.remove('menu-open');
+    toggleBtn.classList.remove('active'); // Restaura o estado do botão de toggle
+  });
+});
+
+</script>
 </body>
 </html>
